@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mocking", "Mocking\Mocking.csproj", "{93AF44D7-5FA5-4730-8482-D128C7EB35E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MockingTest", "MockingTest\MockingTest.csproj", "{20F81962-F5A1-4C5A-9B69-5CE1F28DDC54}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7A8B0EEE-4F66-43A8-A671-D2DBFD027EAA}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		Mocking.vsmdi = Mocking.vsmdi
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Mocking.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93AF44D7-5FA5-4730-8482-D128C7EB35E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93AF44D7-5FA5-4730-8482-D128C7EB35E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93AF44D7-5FA5-4730-8482-D128C7EB35E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93AF44D7-5FA5-4730-8482-D128C7EB35E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20F81962-F5A1-4C5A-9B69-5CE1F28DDC54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20F81962-F5A1-4C5A-9B69-5CE1F28DDC54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20F81962-F5A1-4C5A-9B69-5CE1F28DDC54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20F81962-F5A1-4C5A-9B69-5CE1F28DDC54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
