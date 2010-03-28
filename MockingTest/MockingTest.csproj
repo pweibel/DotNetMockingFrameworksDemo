@@ -31,47 +31,38 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Configuration, Version=5.3.5.0, Culture=neutral, PublicKeyToken=3dae460033b8d8e2, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Moq, Version=2.6.1014.1, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+    <Reference Include="Moq, Version=3.1.416.3, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files\Moq.2.6.1014.1-bin\Moq.dll</HintPath>
+      <HintPath>..\lib\Moq\3.1.416.3\Moq.dll</HintPath>
     </Reference>
     <Reference Include="NMock2, Version=2.0.0.44, Culture=neutral, PublicKeyToken=37d3be0adc87c2b7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files\nmock2-2.0.0.44-net-2.0\bin\NMock2.dll</HintPath>
+      <HintPath>..\lib\NMock2\2.0.0.44\NMock2.dll</HintPath>
     </Reference>
-    <Reference Include="NMock2.AcceptanceTests, Version=1.0.2951.30477, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="nunit.core, Version=2.5.3.9345, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files\nmock2-2.0.0.44-net-2.0\bin\NMock2.AcceptanceTests.dll</HintPath>
+      <HintPath>..\lib\NUnit\2.5.3.9345\nunit.core.dll</HintPath>
     </Reference>
-    <Reference Include="NMock2.Test, Version=1.0.2951.30477, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="nunit.core.interfaces, Version=2.5.3.9345, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files\nmock2-2.0.0.44-net-2.0\bin\NMock2.Test.dll</HintPath>
+      <HintPath>..\lib\NUnit\2.5.3.9345\nunit.core.interfaces.dll</HintPath>
     </Reference>
-    <Reference Include="nunit-console-runner, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
-    <Reference Include="nunit-console.tests, Version=2.4.8.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="nunit-gui-runner, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
-    <Reference Include="nunit-gui.tests, Version=2.4.8.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="nunit.core, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
-    <Reference Include="nunit.core.extensions, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
-    <Reference Include="nunit.core.interfaces, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
-    <Reference Include="nunit.core.tests, Version=2.4.8.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="nunit.extensions.tests, Version=2.4.8.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="nunit.fixtures, Version=2.4.8.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="nunit.fixtures.tests, Version=2.4.8.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="nunit.framework, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
-    <Reference Include="nunit.framework.extensions, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
-    <Reference Include="nunit.framework.tests, Version=2.4.8.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="nunit.mocks, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
-    <Reference Include="nunit.mocks.tests, Version=2.4.8.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="nunit.uikit, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
-    <Reference Include="nunit.uikit.tests, Version=2.4.8.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="nunit.util, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
-    <Reference Include="nunit.util.tests, Version=2.4.8.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="Rhino.Mocks, Version=3.5.0.1337, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+    <Reference Include="nunit.fixtures, Version=2.5.3.9345, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files\Rhino-Mocks-net-3.5-v3.5\Rhino.Mocks.dll</HintPath>
+      <HintPath>..\lib\NUnit\2.5.3.9345\nunit.fixtures.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.3.9345, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\NUnit\2.5.3.9345\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.mocks, Version=2.5.3.9345, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\NUnit\2.5.3.9345\nunit.mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RhinoMocks\3.6\Rhino.Mocks.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -82,18 +73,10 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    <Reference Include="TypeMock, Version=6.0.2.0, Culture=neutral, PublicKeyToken=3dae460033b8d8e2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\TypeMockIsolator\6.0\TypeMock.dll</HintPath>
     </Reference>
-    <Reference Include="TypeMock, Version=5.3.5.0, Culture=neutral, PublicKeyToken=3dae460033b8d8e2, processorArchitecture=MSIL" />
-    <Reference Include="Typemock.ArrangeActAssert, Version=5.3.5.0, Culture=neutral, PublicKeyToken=3dae460033b8d8e2, processorArchitecture=MSIL" />
-    <Reference Include="TypeMock.CLI.Common, Version=5.3.5.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="TypeMock.FinalBuilderActions, Version=5.1.2.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="TypeMock.Integration, Version=5.3.5.0, Culture=neutral, PublicKeyToken=3dae460033b8d8e2, processorArchitecture=MSIL" />
-    <Reference Include="Typemock.Interceptors, Version=5.3.5.0, Culture=neutral, PublicKeyToken=3dae460033b8d8e2, processorArchitecture=MSIL" />
-    <Reference Include="Typemock.Isolator.VisualBasic, Version=5.3.5.0, Culture=neutral, PublicKeyToken=3dae460033b8d8e2, processorArchitecture=MSIL" />
-    <Reference Include="TypeMock.MSBuild, Version=5.3.5.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="TypeMock.NAntBuild, Version=5.3.5.0, Culture=neutral, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MoqTest.cs" />
