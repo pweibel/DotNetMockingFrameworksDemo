@@ -5,7 +5,7 @@ using NMock2;
 namespace MockingTest
 {
 	[TestClass]
-	public class NMockTest
+	public class NMock2Test
 	{
 		[TestMethod]
 		public void TestPersist()
