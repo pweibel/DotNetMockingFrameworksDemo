@@ -64,6 +64,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\RhinoMocks\3.6\Rhino.Mocks.dll</HintPath>
     </Reference>
+    <Reference Include="Simple.Mocking, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\SimpleNet\Simple.Mocking.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -87,6 +91,7 @@
     <Compile Include="NUnitMockTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RhinoMockTest.cs" />
+    <Compile Include="SimpleNetTest.cs" />
     <Compile Include="TypeMockTest.cs" />
   </ItemGroup>
   <ItemGroup>
