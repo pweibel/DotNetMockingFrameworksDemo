@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Mocking;
 using TypeMock;
+using TypeMock.ArrangeActAssert;
 
 namespace MockingTest
 {
@@ -66,5 +67,26 @@ namespace MockingTest
 
 	        MockManager.Verify();
 	    }
+
+		[TestMethod]
+		[Isolated]
+		public void TestPersistWithAAA()
+		{
+			//Arrange
+			//Create mocks
+			UserGateway gateway = Isolate.Fake.Instance<UserGateway>();
+			IUserValidator validator = Isolate.Fake.Instance<IUserValidator>();
+            //Create user
+			User user = new User(gateway);
+            //Expectations
+			Isolate.WhenCalled(() => validator.Validate(user)).WillReturn(true);
+			Isolate.WhenCalled(() => gateway.Persist(user)).WillReturn(true);
+
+			//Act
+			bool bPersist = user.Persist(validator);
+
+			//Assert
+			Assert.AreEqual(true, bPersist);
+		}
 	}
 }
