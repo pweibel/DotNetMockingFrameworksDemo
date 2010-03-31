@@ -84,6 +84,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\TypeMockIsolator\6.0\TypeMock.dll</HintPath>
     </Reference>
+    <Reference Include="Typemock.ArrangeActAssert, Version=6.0.2.0, Culture=neutral, PublicKeyToken=3dae460033b8d8e2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\TypeMockIsolator\6.0\Typemock.ArrangeActAssert.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MoqTest.cs" />
