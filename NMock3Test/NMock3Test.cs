@@ -14,11 +14,11 @@ namespace NMock3Test
         {
             MockFactory factory = new MockFactory();
 
-            //Mocks erzeugen
+            //Create mocks
             Mock<IUserGateway> mockGateway = factory.CreateMock<IUserGateway>();
             Mock<IUserValidator> mockValidator = factory.CreateMock<IUserValidator>();
 
-            //User erstellen
+            //Create user
             User user = new User();
 
             //Expectations
@@ -28,10 +28,10 @@ namespace NMock3Test
                 mockGateway.Expects.One.MethodWith(m => m.Persist(user)).WillReturn(true);
             }
 
-            //Gateway zuweisen
+            //Assign gateway
             user.Gateway = mockGateway.MockObject;
 
-            //Methode testen
+            //Test method
             Assert.AreEqual(true, user.Persist(mockValidator.MockObject));
 
             factory.VerifyAllExpectationsHaveBeenMet();

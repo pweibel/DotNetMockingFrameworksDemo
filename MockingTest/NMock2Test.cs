@@ -12,11 +12,11 @@ namespace MockingTest
 		{
 			Mockery mocks = new Mockery();
 
-			//Mocks erzeugen
+			//Crate mocks
 			IUserGateway mockGateway = mocks.NewMock<IUserGateway>();
 			IUserValidator mockValidator = mocks.NewMock<IUserValidator>();
 
-			//User erstellen
+			//Create user
 			User user = new User();
 
 			//Expectations
@@ -26,10 +26,10 @@ namespace MockingTest
 				Expect.Once.On(mockGateway).Method("Persist").With(user).Will(Return.Value(true));
 			}
 
-			//Gateway zuweisen
+			//Assign gateway
 			user.Gateway = mockGateway;
 
-			//Methode testen
+			//Test method
 			Assert.AreEqual(true, user.Persist(mockValidator));
 
 			mocks.VerifyAllExpectationsHaveBeenMet();
