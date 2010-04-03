@@ -1,0 +1,8 @@
+*.resharper.user
+_ReSharper.Mocking
+.gitignore
+*.suo
+Mocking/bin/*
+Mocking/obj/*
+MockingTest/bin/*
+MockingTest/obj/*
