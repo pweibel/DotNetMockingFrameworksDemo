@@ -17,8 +17,8 @@ namespace MockingTest
 			User user = new User();
 
 			//Excpectations
-			validator.Expect(x => x.Validate(user)).Returns(true);
-			gateway.Expect(x => x.Persist(user)).Returns(true);
+			validator.Setup(x => x.Validate(user)).Returns(true).AtMostOnce();
+			gateway.Setup(x => x.Persist(user)).Returns(true).AtMostOnce();
 
 			//Assign gateway
 			user.Gateway = gateway.Object;
@@ -42,8 +42,8 @@ namespace MockingTest
 			User user = new User();
 
 			//Excpectations
-			mockValidator.Expect(x => x.Validate(user)).Returns(true);
-			mockGateway.Expect(x => x.Persist(user)).Returns(true);
+			mockValidator.Setup(x => x.Validate(user)).Returns(true).AtMostOnce();
+			mockGateway.Setup(x => x.Persist(user)).Returns(true).AtMostOnce();
 
 			//Assign gateway
 			user.Gateway = mockGateway.Object;
