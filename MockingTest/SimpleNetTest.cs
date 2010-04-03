@@ -12,22 +12,22 @@ namespace MockingTest
         [TestMethod]
         public void TestPersist()
         {
-            //Mocks erzeugen
+            //Create mocks
             var expectationScope = new ExpectationScope();
             IUserGateway mockGateway = Mock.Interface<IUserGateway>(expectationScope);
             IUserValidator mockValidator = Mock.Interface<IUserValidator>(expectationScope);
 
-            //User erstellen
+            //Create user
             User user = new User();
 
             //Expectations
             Expect.Once.MethodCall(() => mockValidator.Validate(user)).Returns(true);
             Expect.Once.MethodCall(() => mockGateway.Persist(user)).Returns(true);
 
-            //Gateway zuweisen
+            //Assign gateway
             user.Gateway = mockGateway;
 
-            //Methode testen
+            //Test method
             Assert.AreEqual(true, user.Persist(mockValidator));
 
             AssertExpectations.IsMetFor(expectationScope);

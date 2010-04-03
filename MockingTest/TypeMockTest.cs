@@ -5,10 +5,6 @@ using TypeMock.ArrangeActAssert;
 
 namespace MockingTest
 {
-	 ///<summary>
-	 /// Vorteile: Keine Interfaces notwendig, mächtiges Framework, beide Patterns unterstützt (reflective mocking, natural mocking)
-	 /// Nachteile: Interfaces nicht unterstützt, nicht frei
-	 /// </summary>
 	[TestClass]
 	public class TypeMockTest
 	{
@@ -17,10 +13,10 @@ namespace MockingTest
 	    {
 	        MockManager.Init();
 
-	        //Unschön, muss hier aber so gemacht werden
+	        //Create User
 	        User user = new User();
 
-	        // Natural mocking (Vorteil: Methoden müssen nicht als Strings angegeben werden -> Refactoring)
+	        // Natural mocking
 	        using(RecordExpectations recorder = new RecordExpectations())
 	        {
 	            IUserGateway mockGateway = new UserGateway();
@@ -31,14 +27,14 @@ namespace MockingTest
 	            recorder.ExpectAndReturn(mockGateway.Persist(user), true);
 	        }
 
-	        //Instanzen erstellen
+	        //Create instances
 	        IUserGateway gateway = new UserGateway();
 	        IUserValidator validator = new UserValidator();
 			
-	        //Gateway über Setter-Injection zuweisen
+	        //Assign gateway
 	        user.Gateway = gateway;
 
-	        //Methode
+	        //Test method
 	        Assert.AreEqual(true, user.Persist(validator));
 
 	        MockManager.Verify();
@@ -49,11 +45,11 @@ namespace MockingTest
 	    {
 	        MockManager.Init();
 
-	        //Mocks erstellen
+	        //Create mocks
 	        Mock mockGateway = MockManager.Mock<UserGateway>();
 	        Mock mockValidator = MockManager.Mock<UserValidator>();
 
-	        //User erstellen
+	        //Create user
 	        UserGateway gateway = new UserGateway();
 	        IUserValidator validator = new UserValidator();
 	        User user = new User(gateway);
@@ -62,7 +58,7 @@ namespace MockingTest
 	        mockValidator.ExpectAndReturn("Validate", true).Args(user);
 	        mockGateway.ExpectAndReturn("Persist", true).Args(user);
 
-	        //Methode
+	        //Test method
 	        Assert.AreEqual(true, user.Persist(validator));
 
 	        MockManager.Verify();

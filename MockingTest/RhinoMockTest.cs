@@ -15,7 +15,7 @@ namespace MockingTest
 			IUserGateway gateway = mocks.StrictMock<IUserGateway>();
 			IUserValidator validator = mocks.StrictMock<IUserValidator>();
 
-			//User erstellen
+			//Create user
 			User user = new User();
 
 			//Expectations
@@ -25,13 +25,13 @@ namespace MockingTest
 				Expect.Call(gateway.Persist(user)).Return(true);
 			}
 
-			//Recording stoppen, Replay starten
+			//Stop recording, start replay
 			mocks.ReplayAll();
 
-			//Gateway zuweisen
+			//Assign gateway
 			user.Gateway = gateway;
 
-			//Methode testen
+			//Test method
 			Assert.AreEqual(true, user.Persist(validator));
 
 			mocks.VerifyAll();
@@ -43,17 +43,17 @@ namespace MockingTest
 			var gateway = MockRepository.GenerateMock<IUserGateway>();
 			var validator = MockRepository.GenerateMock<IUserValidator>();
 
-			//User erstellen
+			//Create user
 			User user = new User();
 
 			//Expectations
 			validator.Expect(x => x.Validate(user)).Return(true);
 			gateway.Expect(x => x.Persist(user)).Return(true);
 
-			//Gateway zuweisen
+			//Assign gateway
 			user.Gateway = gateway;
 
-			//Methode testen
+			//Test method
 			Assert.AreEqual(true, user.Persist(validator));
 
 			//Asserts

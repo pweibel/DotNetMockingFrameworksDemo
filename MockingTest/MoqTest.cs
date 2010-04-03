@@ -8,21 +8,22 @@ namespace MockingTest
 	public class MoqTest
 	{
 		[TestMethod]
-		public void TestPersist1()
+		public void TestPersist()
 		{
 			var gateway = new Mock<IUserGateway>();
 			var validator = new Mock<IUserValidator>();
 
+			//Create user
 			User user = new User();
 
 			//Excpectations
 			validator.Expect(x => x.Validate(user)).Returns(true);
 			gateway.Expect(x => x.Persist(user)).Returns(true);
 
-			//Gateway setzen
+			//Assign gateway
 			user.Gateway = gateway.Object;
 
-			//Methode testen
+			//Test method
 			Assert.AreEqual(true, user.Persist(validator.Object));
 
 			validator.VerifyAll();
@@ -30,11 +31,11 @@ namespace MockingTest
 		}
 
 		[TestMethod]
-		public void TestPersist2()
+		public void TestPersistWithFactory()
 		{
 			MockFactory factory = new MockFactory(MockBehavior.Strict);
 
-			//Klassen gehen, Methoden müssen jedoch virtual sein -> unschön
+			//Classes work, methods have to be virtual -> not nice
 			var mockGateway = factory.Create<UserGateway>();
 			var mockValidator = factory.Create<IUserValidator>();
 
@@ -44,10 +45,10 @@ namespace MockingTest
 			mockValidator.Expect(x => x.Validate(user)).Returns(true);
 			mockGateway.Expect(x => x.Persist(user)).Returns(true);
 
-			//Gateway setzen
+			//Assign gateway
 			user.Gateway = mockGateway.Object;
 
-			//Methode testen
+			//Test method
 			Assert.AreEqual(true, user.Persist(mockValidator.Object));
 
 			factory.VerifyAll();
