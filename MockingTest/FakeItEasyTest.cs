@@ -21,9 +21,10 @@ namespace MockingTest
 			A.CallTo(() => gateway.Persist(user)).Returns(true);
 
 			// Act
-			Assert.AreEqual(true, user.Persist(validator));
+			bool bRet = user.Persist(validator);
 
 			// Assert
+			Assert.AreEqual(true, bRet);
 			A.CallTo(() => validator.Validate(user)).MustHaveHappened(Repeated.Once);
 			A.CallTo(() => gateway.Persist(user)).MustHaveHappened(Repeated.Once);
 		}
@@ -60,9 +61,10 @@ namespace MockingTest
 			A.CallTo(() => gateway.Persist(user)).Returns(true);
 
 			// Act
-			Assert.AreEqual(true, user.Persist(validator));
+			bool bRet = user.Persist(validator);
 
 			// Assert
+			Assert.AreEqual(true, bRet);
 			A.CallTo(() => validator.Validate(user)).MustHaveHappened(Repeated.Once);
 			A.CallTo(() => gateway.Persist(user)).MustHaveHappened(Repeated.Once);
 		}
@@ -80,9 +82,10 @@ namespace MockingTest
 			A.CallTo(() => gateway.Persist(user)).Returns(true);
 
 			// Act
-			Assert.AreEqual(true, user.Persist(validator));
+			bool bRet = user.Persist(validator);
 
 			// Assert
+			Assert.AreEqual(true, bRet);
 			A.CallTo(() => validator.Validate(user)).MustHaveHappened(Repeated.Once);
 			A.CallTo(() => gateway.Persist(user)).MustHaveHappened(Repeated.Once);
 		}
